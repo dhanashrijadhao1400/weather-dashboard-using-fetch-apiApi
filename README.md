@@ -1,1 +1,1 @@
-# weather-dashboard-using-fetch-apiApi
+# weather-dashboard-using-fetch-api
