@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration Dashboard</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 API Integration Dashboard</h1>
+            <p>Real-time data from multiple public APIs</p>
+        </div>
+
+        <div class="dashboard">
+            <!-- Weather Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🌤️</div>
+                    <div class="card-title">Weather Information</div>
+                </div>
+                <div id="weather-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading weather data...
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">📰</div>
+                    <div class="card-title">Latest News</div>
+                </div>
+                <div id="news-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading news data...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Card -->
+            <div class="card quote-card">
+                <div class="card-header">
+                    <div class="card-icon">💭</div>
+                    <div class="card-title">Inspirational Quote</div>
+                </div>
+                <div id="quote-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading quote...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cryptocurrency Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">₿</div>
+                    <div class="card-title">Cryptocurrency Prices</div>
+                </div>
+                <div id="crypto-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading crypto data...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Random Facts Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🧠</div>
+                    <div class="card-title">Random Fact</div>
+                </div>
+                <div id="fact-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading fact...
+                    </div>
+                </div>
+            </div>
+
+            <!-- IP Geolocation Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🌍</div>
+                    <div class="card-title">Your Location</div>
+                </div>
+                <div id="location-content">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading location...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="refresh-btn" onclick="refreshAllData()">🔄 Refresh All Data</button>
+            <button class="toggle-theme-btn" onclick="toggleTheme()">🌙 Toggle Theme</button>
+        </div>
+
+        <div class="footer">
+            <p>Built with HTML, CSS, and JavaScript | API Integration Demo</p>
+        </div>
+    </div>
+
+    <div class="location-info">
+            <div class="location-item">
+                <div class="location-label">City</div>
+                <div class="location-value">${data.city}</div>
+            </div>
+            <div class="location-item">
+                <div class="location-label">Region</div>
+                <div class="location-value">${data.region}</div>
+            </div>
+            <div class="location-item">
+                <div class="location-label">Country</div>
+                <div class="location-value">${data.country_name}</div>
+            </div>
+            <div class="location-item">
+                <div class="location-label">Timezone</div>
+                <div class="location-value">${data.timezone}</div>
+            </div>
+        </div>
+
+ <script src="weather.js"></script>
+</body>
+</html>
+</body>
